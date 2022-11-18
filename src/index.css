@@ -3,10 +3,13 @@ html {
   color: white;
 }
 
-form {
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+}
+
+input[type="submit"] {
 }
 
 .form_card {

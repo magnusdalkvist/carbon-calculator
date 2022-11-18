@@ -16,4 +16,9 @@ form {
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+  border-radius: 1rem;
+}
+
+.svg {
+  fill: black;
 }

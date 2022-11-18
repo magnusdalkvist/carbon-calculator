@@ -1,8 +1,9 @@
 function FormCard(props) {
   return (
     <div className="form_card">
-      <h2>{props.name}</h2>
-      <input type="number" />
+      {props.children}
+      <h3>{props.name}</h3>
+      <input type="number" placeholder="Time used (min)" />
     </div>
   );
 }

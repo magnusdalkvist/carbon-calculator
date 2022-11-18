@@ -29,7 +29,10 @@ function Form() {
     const reddit = theForm.current.elements.Reddit.value * redditVal;
     const snapchat = theForm.current.elements.Snapchat.value * snapchatVal;
 
-    console.log(youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat + "g");
+    const all = youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat;
+
+    console.log(all.toFixed(2) + "g CO2");
+    console.log(((all * 365) / 1000).toFixed(2) + "Kg CO2 per year");
   }
 
   return (

@@ -30,11 +30,12 @@ function Form() {
     const snapchat = theForm.current.elements.Snapchat.value * snapchatVal;
 
     const all = youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat;
+    const allKm = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat) / 1000;
 
     console.log(all.toFixed(2) + "g CO2");
     console.log(((all * 365) / 1000).toFixed(2) + "Kg CO2 per year");
+    console.log((allKm * 0.196974607).toFixed(2) + "km driven in a Toyota Corolla");
   }
-
   return (
     <>
       <h2>How many minutes a day do you spend using:</h2>

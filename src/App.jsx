@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import Form from "./components/Form";
 import Home from "./components/Home";
 import Results from "./components/Results";
@@ -12,9 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      {page === "home" && <Home />}
+      {page === "home" && <Home setPage={setPage} />}
       {page === "form" && <Form setPage={setPage} setForm={setForm} theForm={theForm} />}
-      {page === "results" && <Results form={form} theForm={theForm} />}
+      {page === "results" && <Results setPage={setPage} form={form} theForm={theForm} />}
     </div>
   );
 }

@@ -4,16 +4,19 @@ function Form(props) {
   function submit(e) {
     e.preventDefault();
 
+    const arr = Array.from(props.theForm.current.elements).filter((e) => e.type == "number");
+
     let totalMin = 0;
-    Array.from(props.theForm.current.elements).forEach((e) => {
+    arr.forEach((e) => {
       e.value > 0 ? (totalMin += parseInt(e.value)) : null;
     });
     if (totalMin > 1440) {
+      console.log(totalMin);
       alert("Theres only 1440 minutes in a day!");
       return false;
     }
 
-    props.setForm(Array.from(props.theForm.current.elements).filter((e) => e.type == "number"));
+    props.setForm(arr);
     props.setPage("results");
   }
   return (

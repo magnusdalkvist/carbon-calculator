@@ -9,9 +9,6 @@ html {
   gap: 1rem;
 }
 
-input[type="submit"] {
-}
-
 .form_card {
   color: black;
   background-color: white;

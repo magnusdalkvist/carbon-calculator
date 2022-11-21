@@ -1,15 +1,11 @@
-import { useRef } from "react";
 import FormCard from "./FormCard";
-import data from "../assets/data.json";
 
-function Form() {
-  const theForm = useRef(null);
-
+function Form(props) {
   function submit(e) {
     e.preventDefault();
 
     let totalMin = 0;
-    Array.from(theForm.current.elements).forEach((e) => {
+    Array.from(props.theForm.current.elements).forEach((e) => {
       e.value > 0 ? (totalMin += parseInt(e.value)) : null;
     });
     if (totalMin > 1440) {
@@ -17,28 +13,13 @@ function Form() {
       return false;
     }
 
-    const youtube = theForm.current.elements.Youtube.value * data.co2.youtube;
-    const facebook = theForm.current.elements.Facebook.value * data.co2.facebook;
-    const instagram = theForm.current.elements.Instagram.value * data.co2.instagram;
-    const twitter = theForm.current.elements.Twitter.value * data.co2.twitter;
-    const pinterest = theForm.current.elements.Pinterest.value * data.co2.pinterest;
-    const twitch = theForm.current.elements.Twitch.value * data.co2.twitch;
-    const linkedin = theForm.current.elements.LinkedIn.value * data.co2.linkedin;
-    const tiktok = theForm.current.elements.Tiktok.value * data.co2.tiktok;
-    const reddit = theForm.current.elements.Reddit.value * data.co2.reddit;
-    const snapchat = theForm.current.elements.Snapchat.value * data.co2.snapchat;
-
-    const all = youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat;
-    const allKm = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat) / 1000;
-
-    console.log(all.toFixed(2) + "g CO2");
-    console.log(((all * 365) / 1000).toFixed(2) + "Kg CO2 per year");
-    console.log((allKm * 0.196974607).toFixed(2) + "km driven in a Toyota Corolla");
+    props.setForm(Array.from(props.theForm.current.elements).filter((e) => e.type == "number"));
+    props.setPage("results");
   }
   return (
     <>
       <h2>How many minutes a day do you spend using:</h2>
-      <form ref={theForm} onSubmit={submit}>
+      <form ref={props.theForm} onSubmit={submit}>
         <div className="cards">
           <FormCard name="Youtube">
             <svg className="youtube svg" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24">

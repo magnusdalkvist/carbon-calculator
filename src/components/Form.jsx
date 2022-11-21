@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import FormCard from "./FormCard";
+import co2 from "../assets/c02.json";
 
 function Form() {
   const theForm = useRef(null);
@@ -7,27 +8,25 @@ function Form() {
   function submit(e) {
     e.preventDefault();
 
-    const facebookVal = 0.79;
-    const youtubeVal = 0.46;
-    const twitchVal = 0.55;
-    const twitterVal = 0.6;
-    const linkedinVal = 0.71;
-    const snapchatVal = 0.87;
-    const instagramVal = 1.05;
-    const pinterestVal = 1.3;
-    const redditVal = 2.48;
-    const tiktokVal = 2.63;
+    let totalMin = 0;
+    Array.from(theForm.current.elements).forEach((e) => {
+      e.value > 0 ? (totalMin += parseInt(e.value)) : null;
+    });
+    if (totalMin > 1440) {
+      alert("Theres only 1440 minutes in a day!");
+      return false;
+    }
 
-    const youtube = theForm.current.elements.Youtube.value * youtubeVal;
-    const facebook = theForm.current.elements.Facebook.value * facebookVal;
-    const instagram = theForm.current.elements.Instagram.value * instagramVal;
-    const twitter = theForm.current.elements.Twitter.value * twitterVal;
-    const pinterest = theForm.current.elements.Pinterest.value * pinterestVal;
-    const twitch = theForm.current.elements.Twitch.value * twitchVal;
-    const linkedin = theForm.current.elements.LinkedIn.value * linkedinVal;
-    const tiktok = theForm.current.elements.Tiktok.value * tiktokVal;
-    const reddit = theForm.current.elements.Reddit.value * redditVal;
-    const snapchat = theForm.current.elements.Snapchat.value * snapchatVal;
+    const youtube = theForm.current.elements.Youtube.value * co2.youtube;
+    const facebook = theForm.current.elements.Facebook.value * co2.facebook;
+    const instagram = theForm.current.elements.Instagram.value * co2.instagram;
+    const twitter = theForm.current.elements.Twitter.value * co2.twitter;
+    const pinterest = theForm.current.elements.Pinterest.value * co2.pinterest;
+    const twitch = theForm.current.elements.Twitch.value * co2.twitch;
+    const linkedin = theForm.current.elements.LinkedIn.value * co2.linkedin;
+    const tiktok = theForm.current.elements.Tiktok.value * co2.tiktok;
+    const reddit = theForm.current.elements.Reddit.value * co2.reddit;
+    const snapchat = theForm.current.elements.Snapchat.value * co2.snapchat;
 
     const all = youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat;
     const allKm = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat) / 1000;

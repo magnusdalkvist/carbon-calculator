@@ -30,8 +30,10 @@ function Results(props) {
       <h1>Total: {total}g CO2 pr. day</h1>
       <h1>Total: {year}kg CO2 pr. year</h1>
       <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
-      <button onClick={() => props.setPage("home")}>Back to start</button>
-      <button onClick={() => props.setPage("form")}>Take the test again</button>
+      <div className="btns">
+        <button onClick={() => props.setPage("home")}>Back to start</button>
+        <button onClick={() => props.setPage("form")}>Take the test again</button>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import FormCard from "./FormCard";
-import co2 from "../assets/c02.json";
+import data from "../assets/data.json";
 
 function Form() {
   const theForm = useRef(null);
@@ -17,16 +17,16 @@ function Form() {
       return false;
     }
 
-    const youtube = theForm.current.elements.Youtube.value * co2.youtube;
-    const facebook = theForm.current.elements.Facebook.value * co2.facebook;
-    const instagram = theForm.current.elements.Instagram.value * co2.instagram;
-    const twitter = theForm.current.elements.Twitter.value * co2.twitter;
-    const pinterest = theForm.current.elements.Pinterest.value * co2.pinterest;
-    const twitch = theForm.current.elements.Twitch.value * co2.twitch;
-    const linkedin = theForm.current.elements.LinkedIn.value * co2.linkedin;
-    const tiktok = theForm.current.elements.Tiktok.value * co2.tiktok;
-    const reddit = theForm.current.elements.Reddit.value * co2.reddit;
-    const snapchat = theForm.current.elements.Snapchat.value * co2.snapchat;
+    const youtube = theForm.current.elements.Youtube.value * data.co2.youtube;
+    const facebook = theForm.current.elements.Facebook.value * data.co2.facebook;
+    const instagram = theForm.current.elements.Instagram.value * data.co2.instagram;
+    const twitter = theForm.current.elements.Twitter.value * data.co2.twitter;
+    const pinterest = theForm.current.elements.Pinterest.value * data.co2.pinterest;
+    const twitch = theForm.current.elements.Twitch.value * data.co2.twitch;
+    const linkedin = theForm.current.elements.LinkedIn.value * data.co2.linkedin;
+    const tiktok = theForm.current.elements.Tiktok.value * data.co2.tiktok;
+    const reddit = theForm.current.elements.Reddit.value * data.co2.reddit;
+    const snapchat = theForm.current.elements.Snapchat.value * data.co2.snapchat;
 
     const all = youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat;
     const allKm = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat) / 1000;

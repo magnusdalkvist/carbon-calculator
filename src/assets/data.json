@@ -10,5 +10,29 @@
     "pinterest": 1.3,
     "reddit": 2.48,
     "tiktok": 2.63
+  },
+  "energy": {
+    "facebook": 12.36,
+    "youtube": 8.58,
+    "twitch": 9.05,
+    "twitter": 10.28,
+    "linkedin": 8.92,
+    "snapchat": 11.48,
+    "instagram": 8.9,
+    "pinterest": 10.83,
+    "reddit": 11.04,
+    "tiktok": 15.81
+  },
+  "mobildata": {
+    "facebook": 11.15,
+    "youtube": 3.09,
+    "twitch": 6.87,
+    "twitter": 6.28,
+    "linkedin": 15.34,
+    "snapchat": 17.26,
+    "instagram": 32.46,
+    "pinterest": 40.65,
+    "reddit": 100,
+    "tiktok": 96.23
   }
 }

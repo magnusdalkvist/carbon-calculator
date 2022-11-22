@@ -29,6 +29,7 @@ function Results(props) {
 
   const total = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat).toFixed(2);
   const totalData = (youtubeData + facebookData + instagramData + twitterData + pinterestData + twitchData + linkedinData + tiktokData + redditData + snapchatData).toFixed(2);
+  const totalDataGb = (totalData / 1000).toFixed(2);
   const year = ((total * 365) / 1000).toFixed(2);
   const driving = (total / 1000 / 0.196974607).toFixed(2);
   return (

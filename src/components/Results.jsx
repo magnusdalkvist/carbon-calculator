@@ -34,10 +34,18 @@ function Results(props) {
   const driving = (total / 1000 / 0.196974607).toFixed(2);
   return (
     <>
-      <h1>Total: {total}g CO2 pr. day</h1>
-      <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
-      <h2>And you downloaded approximately {totalDataGb} GB data while scrolling your feed.</h2>
-      <h1>Total: {year}kg CO2 pr. year</h1>
+      <div className="results">
+        <div className="day">
+          <h1>Total: {total}g CO2 pr. day</h1>
+          <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
+          <h2>And you downloaded approximately {totalDataGb} GB data while scrolling your feed.</h2>
+        </div>
+        <div className="month">
+          <h1>Total: {((total * 31) / 1000).toFixed(2)}kg CO2 pr. month</h1>
+          <h2>That is the equivelent of driving {(driving * 31).toFixed(2)}km in a Toyota Corolla</h2>
+          <h2>And you downloaded approximately {(totalDataGb * 31).toFixed(2)} GB data while scrolling your feed.</h2>
+        </div>
+      </div>
       <div className="btns">
         <button onClick={() => props.setPage("home")}>Back to start</button>
         <button onClick={() => props.setPage("form")}>Take the test again</button>

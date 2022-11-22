@@ -19,11 +19,6 @@ function App() {
         {page === "results" && <Results setPage={setPage} form={form} theForm={theForm} />}
         {page === "documentation" && <Documentation setPage={setPage} />}
       </div>
-      <div id="waves">
-        <div className="wave"></div>
-        <div className="wave"></div>
-        <div className="wave"></div>
-      </div>
     </>
   );
 }

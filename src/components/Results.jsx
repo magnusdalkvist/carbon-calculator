@@ -30,20 +30,28 @@ function Results(props) {
   const total = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat).toFixed(2);
   const totalData = (youtubeData + facebookData + instagramData + twitterData + pinterestData + twitchData + linkedinData + tiktokData + redditData + snapchatData).toFixed(2);
   const totalDataGb = (totalData / 1000).toFixed(2);
-  const year = ((total * 365) / 1000).toFixed(2);
   const driving = (total / 1000 / 0.196974607).toFixed(2);
   return (
     <>
+      <h1>The result of your activity</h1>
       <div className="results">
         <div className="day">
-          <h1>Total: {total}g CO2 pr. day</h1>
-          <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
-          <h2>And you downloaded approximately {totalDataGb} GB data while scrolling your feed.</h2>
+          <h2>{total}g CO2e / day</h2>
+          <p>
+            That is the equivelent of driving <b>{driving}km</b> in a Toyota Corolla.
+          </p>
+          <p>
+            And you downloaded approximately <b>{totalDataGb}GB</b> data while scrolling your feed.
+          </p>
         </div>
         <div className="month">
-          <h1>Total: {((total * 31) / 1000).toFixed(2)}kg CO2 pr. month</h1>
-          <h2>That is the equivelent of driving {(driving * 31).toFixed(2)}km in a Toyota Corolla</h2>
-          <h2>And you downloaded approximately {(totalDataGb * 31).toFixed(2)} GB data while scrolling your feed.</h2>
+          <h2>{((total * 31) / 1000).toFixed(2)}kg CO2e / month</h2>
+          <p>
+            That is the equivelent of driving <b>{(driving * 31).toFixed(2)}km</b> in a Toyota Corolla.
+          </p>
+          <p>
+            And you downloaded approximately <b>{(totalDataGb * 31).toFixed(2)}GB</b> data while scrolling your feed.
+          </p>
         </div>
       </div>
       <div className="btns">

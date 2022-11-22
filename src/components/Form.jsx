@@ -22,8 +22,8 @@ function Form(props) {
   }
   return (
     <>
-      <h2>How many minutes a day do you spend using:</h2>
-      <form ref={props.theForm} onSubmit={submit}>
+      <h1 className="center">How many minutes a day do you spend using:</h1>
+      <form ref={props.theForm} onSubmit={submit} className="form">
         <div className="cards">
           <FormCard name="Youtube">
             <svg className="youtube svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">

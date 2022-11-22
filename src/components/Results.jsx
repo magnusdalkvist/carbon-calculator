@@ -40,7 +40,7 @@ function Results(props) {
         <div className="day">
           <h2>{total}g CO2e / day</h2>
           <p>
-            That is the equivelent of driving <b>{driving}km</b> in a Toyota Corolla.
+            That is the equivelent of driving <b>{driving}km</b> in a 2020 Toyota Corolla.
           </p>
           <p>
             And you downloaded approximately <b>{totalDataGb}GB</b> data while scrolling your feed.
@@ -49,7 +49,7 @@ function Results(props) {
         <div className="month">
           <h2>{((total * 31) / 1000).toFixed(2)}kg CO2e / month</h2>
           <p>
-            That is the equivelent of driving <b>{(driving * 31).toFixed(2)}km</b> in a Toyota Corolla.
+            That is the equivelent of driving <b>{(driving * 31).toFixed(2)}km</b> in a 2020 Toyota Corolla.
           </p>
           <p>
             And you downloaded approximately <b>{(totalDataGb * 31).toFixed(2)}GB</b> data while scrolling your feed.

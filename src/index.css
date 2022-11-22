@@ -71,6 +71,7 @@ input[type="number"] {
 input[type="number"]::-webkit-inner-spin-button {
   margin-left: 10%;
   opacity: 1;
+  cursor: pointer;
 }
 
 input[type="range"] {
@@ -120,9 +121,31 @@ button {
   border-radius: 0.5rem;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
-button:active {
+button:hover {
+  filter: brightness(85%);
+}
+
+.funnyBtn {
+  color: #dcded5;
+  background: linear-gradient(-90deg, #1e425e, #256670, #407056, #4fb469, #82c158);
+  background-position: center;
+  background-size: 300%;
+  animation: gradient 35s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 input[type="submit"] {

@@ -80,7 +80,7 @@ function Form(props) {
           <button onClick={() => props.setPage("home")} type="button">
             Back to start
           </button>
-          <button onClick={submit} type="submit">
+          <button className="funnyBtn" onClick={submit} type="submit">
             See the results
           </button>
         </div>

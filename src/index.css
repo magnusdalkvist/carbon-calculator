@@ -3,14 +3,19 @@ html {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   width: 500px;
-  height: 700px;
   background: #dcded5;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 20px 50px #000;
-  padding: 1rem;
-  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 50px #000;
+  padding: 2rem;
+}
+
+.text p {
+  margin-bottom: 0.5rem;
 }
 
 .cards {
@@ -19,63 +24,71 @@ html {
   width: 100%;
   justify-items: space-evenly;
   gap: 0.3rem;
+  margin-bottom: 1rem;
 }
 
 .Logo {
-  width: auto;
-  height: 22%;
-  padding: 1rem;
-  margin: 1rem 0 1rem 0;
+  width: 100%;
 }
 
 .form_card {
+  display: grid;
+  grid-template-columns: min-content auto 1fr min-content;
+  gap: 1rem;
   color: black;
-  display: flex;
-  flex-direction: row;
-  height: 40px;
 }
 
 input[type="number"] {
-  width: 45px;
-  height: 15px;
+  width: 7ch;
   justify-self: end;
   align-self: center;
+  background: none;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  text-align: right;
 }
+
+input[type="number"]::-webkit-inner-spin-button {
+  margin-left: 4px;
+  opacity: 1;
+}
+
 input[type="range"] {
   justify-self: end;
+  height: 100%;
   width: 100%;
-  margin-right: 1rem;
   background: none;
 }
 
 h3 {
-  align-self: center;
-  width: 50%;
+  justify-self: center;
+  text-align: center;
+  height: 100%;
+  width: 100px;
 }
 
 .svg {
   fill: black;
-  height: auto;
-  width: 10%;
+  width: 32px;
+  height: 100%;
   align-self: center;
-  padding-right: 0.3rem;
 }
 
 .btns {
-  margin-top: 0.6rem;
   display: flex;
   justify-content: space-around;
+  gap: 1rem;
 }
 button {
   width: 100%;
   padding: 1rem;
-  margin: 0 0.3em 0.3em 0;
   box-sizing: border-box;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
   color: 0;
   background-color: #dcded5;
+  border-radius: 0.5rem;
   text-align: center;
 }
 button:active {
@@ -85,4 +98,10 @@ input[type="submit"] {
   margin-top: 1rem;
   width: 80%;
   align-self: center;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
 }

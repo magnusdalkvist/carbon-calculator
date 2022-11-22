@@ -44,6 +44,7 @@ input[type="range"] {
   justify-self: end;
   width: 100%;
   margin-right: 1rem;
+  background: none;
 }
 
 h3 {
@@ -72,7 +73,7 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
-  color: #0;
+  color: 0;
   background-color: #dcded5;
   text-align: center;
 }

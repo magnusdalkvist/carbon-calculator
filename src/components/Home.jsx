@@ -13,8 +13,8 @@ function Home(props) {
       <div>
         <h2 className="center">Take the test to see your carbon footprint</h2>
         <div className="btns">
+          <button onClick={() => props.setPage("documentation")}>Documentation</button>
           <button onClick={() => props.setPage("form")}>Take the test</button>
-          <button onClick={() => props.setPage("form")}>Documentation</button>
         </div>
       </div>
     </>

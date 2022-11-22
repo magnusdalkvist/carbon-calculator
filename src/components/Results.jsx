@@ -30,6 +30,7 @@ function Results(props) {
       <h1>Total: {total}g CO2 pr. day</h1>
       <h1>Total: {year}kg CO2 pr. year</h1>
       <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
+
       <div className="btns">
         <button onClick={() => props.setPage("home")}>Back to start</button>
         <button onClick={() => props.setPage("form")}>Take the test again</button>
@@ -37,5 +38,5 @@ function Results(props) {
     </div>
   );
 }
-
+// TODO make result shareable on socials.
 export default Results;

@@ -77,9 +77,11 @@ function Form(props) {
           </FormCard>
         </div>
         <div className="btns">
-          <button onClick={() => props.setPage("home")}>Back to start</button>
-          <button onClick={submit} type="button">
-            {" See the results "}
+          <button onClick={() => props.setPage("home")} type="button">
+            Back to start
+          </button>
+          <button onClick={submit} type="submit">
+            See the results
           </button>
         </div>
       </form>

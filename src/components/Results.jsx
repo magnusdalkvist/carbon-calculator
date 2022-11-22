@@ -20,7 +20,7 @@ function Results(props) {
 
   const total = (youtube + facebook + instagram + twitter + pinterest + twitch + linkedin + tiktok + reddit + snapchat).toFixed(2);
   const year = ((total * 365) / 1000).toFixed(2);
-  const driving = ((total / 1000) * 0.196974607).toFixed(2);
+  const driving = (total / 1000 / 0.196974607).toFixed(2);
 
   //   console.log(all.toFixed(2) + "g CO2");
   //   console.log(((all * 365) / 1000).toFixed(2) + "Kg CO2 per year");
@@ -28,9 +28,8 @@ function Results(props) {
   return (
     <div>
       <h1>Total: {total}g CO2 pr. day</h1>
-      <h1>Total: {year}kg CO2 pr. year</h1>
       <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
-
+      <h1>Total: {year}kg CO2 pr. year</h1>
       <div className="btns">
         <button onClick={() => props.setPage("home")}>Back to start</button>
         <button onClick={() => props.setPage("form")}>Take the test again</button>

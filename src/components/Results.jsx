@@ -36,7 +36,7 @@ function Results(props) {
     <>
       <h1>Total: {total}g CO2 pr. day</h1>
       <h2>That is the equivelent of driving {driving}km in a Toyota Corolla</h2>
-      <h2>And you downloaded approximately {totalData} MB data while scrolling your feed.</h2>
+      <h2>And you downloaded approximately {totalDataGb} GB data while scrolling your feed.</h2>
       <h1>Total: {year}kg CO2 pr. year</h1>
       <div className="btns">
         <button onClick={() => props.setPage("home")}>Back to start</button>

@@ -37,5 +37,5 @@ function Results(props) {
     </div>
   );
 }
-
+// TODO make result shareable on socials.
 export default Results;

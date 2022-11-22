@@ -1,4 +1,5 @@
 import data from "../assets/data.json";
+import logo from "../assets/logo.svg";
 
 function Results(props) {
   const arr = props.form.map((e) => {
@@ -33,6 +34,7 @@ function Results(props) {
   const driving = (total / 1000 / 0.196974607).toFixed(2);
   return (
     <>
+      <img src={logo} alt="Logo" className="Logo" />
       <h1>The result of your activity</h1>
       <div className="results">
         <div className="day">

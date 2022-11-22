@@ -22,7 +22,7 @@ function Form(props) {
   }
   return (
     <>
-      <h1 className="center">How many minutes a day do you spend using:</h1>
+      <h1 className="center">How many minutes a day do you use on:</h1>
       <form ref={props.theForm} onSubmit={submit} className="form">
         <div className="cards">
           <FormCard name="Youtube">

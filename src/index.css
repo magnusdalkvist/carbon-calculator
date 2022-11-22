@@ -47,6 +47,7 @@ html {
 .Logo {
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
 .form_card {
@@ -83,7 +84,7 @@ input[type="range"] {
   text-align: center;
 }
 
-h3 {
+form h3 {
   justify-self: center;
   text-align: center;
   height: 100%;

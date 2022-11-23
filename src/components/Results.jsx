@@ -34,28 +34,31 @@ function Results(props) {
   const driving = (total / 1000 / 0.196974607).toFixed(2);
   return (
     <>
-      <img src={logo} alt="Logo" className="Logo" />
-      <h1>The result of your activity</h1>
-      <div className="results">
-        <div className="day">
-          <h2>{total}g CO2e / day</h2>
-          <p>
-            That is the equivelent of driving <b>{driving}km</b> in a 2020 Toyota Corolla.
-          </p>
-          <p>
-            And you downloaded approximately <b>{totalDataGb}GB</b> data while scrolling your feed.
-          </p>
-        </div>
-        <div className="month">
-          <h2>{((total * 31) / 1000).toFixed(2)}kg CO2e / month</h2>
-          <p>
-            That is the equivelent of driving <b>{(driving * 31).toFixed(2)}km</b> in a 2020 Toyota Corolla.
-          </p>
-          <p>
-            And you downloaded approximately <b>{(totalDataGb * 31).toFixed(2)}GB</b> data while scrolling your feed.
-          </p>
+      <img src={logo} alt="Logo" className="Logo" width="763px" height="254px" />
+      <div>
+        <h1>The result of your activity</h1>
+        <div className="results">
+          <div className="day">
+            <h2>{total}g CO2e / day</h2>
+            <p>
+              That is the equivelent of driving <b>{driving}km</b> in a 2020 Toyota Corolla.
+            </p>
+            <p>
+              And you downloaded approximately <b>{totalDataGb}GB</b> data while scrolling your feed.
+            </p>
+          </div>
+          <div className="month">
+            <h2>{((total * 31) / 1000).toFixed(2)}kg CO2e / month</h2>
+            <p>
+              That is the equivelent of driving <b>{(driving * 31).toFixed(2)}km</b> in a 2020 Toyota Corolla.
+            </p>
+            <p>
+              And you downloaded approximately <b>{(totalDataGb * 31).toFixed(2)}GB</b> data while scrolling your feed.
+            </p>
+          </div>
         </div>
       </div>
+
       <div className="btns">
         <button onClick={() => props.setPage("home")}>Back to start</button>
         <button onClick={() => props.setPage("form")}>Take the test again</button>
